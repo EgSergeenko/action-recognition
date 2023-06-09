@@ -84,7 +84,7 @@ class VideoDataset(BaseDataset):
         video = self._load_video(video_filepath)
         label = self._get_label(idx)
         video = torch.stack([self.transforms(frame) for frame in video])
-        return self.transforms(video), label
+        return video, label
 
 
 def get_transforms(
