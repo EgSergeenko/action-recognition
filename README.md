@@ -10,4 +10,4 @@
 
 ||frame-classifier|3D-CNN|X-CLIP|
 | :---: | :---: | :---: | :---: |
-|F1 (macro)|NaN|0.12|0.6|
+|F1 (macro)|0.089|0.12|0.6|
