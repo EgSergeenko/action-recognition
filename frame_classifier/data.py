@@ -49,7 +49,7 @@ class BaseDataset(Dataset):
 
     def _load_video(self, video_filepath: str) -> torch.Tensor:
         return torchvision.io.read_video(
-            video_filepath, output_format='TCHW',
+            video_filepath, pts_unit='sec', output_format='TCHW',
         )[0] / 255
 
     def _get_video_filepath(self, idx: int) -> str:

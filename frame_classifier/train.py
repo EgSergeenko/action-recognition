@@ -68,6 +68,7 @@ def train_epoch(
     optimizer: Optimizer,
     device: torch.device,
 ) -> tuple[list[int], list[int], float]:
+    model.train()
     epoch_loss = 0
     y_true, y_pred = [], []
     for batch in dataloader:
@@ -104,6 +105,7 @@ def val_epoch(
     model: torch.nn.Module,
     device: torch.device,
 ):
+    model.eval()
     y_true, y_pred = [], []
     for batch in dataloader:
         target, prediction = val_step(
